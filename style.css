@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
+    background: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
 }
 .main{
     height: 100vh;
@@ -30,7 +30,6 @@ body{
 .form-box{
     padding: 0 24px;
     width: 50%; 
-
 }
 .title{
     font-family: sans-serif;
@@ -42,11 +41,12 @@ body{
 .form-group{
     display: flex;
     flex-direction: column;
-    margin-bottom: 24px;
+    margin: 24px;
 }
 .form-group label{
     font-family: sans-serif;
-    margin-bottom: 4px;
+    font-size: 14px;
+    margin-bottom: 2px;
     color: #323232;
 }
 .form-group input{
@@ -68,4 +68,60 @@ input:focus{
 .submit-btn:hover{
     background-color: #1e30ff;
     transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    body{
+        background-image: url('images/signupImg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+    .signup-box{
+        width: 80%;
+        height: auto;
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.3)
+    }
+    .signupImg{
+        display: none;
+    }
+    .form-box{
+        padding: 0 24px;
+        width: 100%; 
+    }
+    .title{
+        font-family: sans-serif;
+        font-size: 32px;
+        margin: 12px 0;
+        color: white;
+    }
+     .form-group{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .form-group label{
+        color: white;
+        font-size: 15px;        
+    }
+    .form-group input{
+        border: none;
+        background:  rgba(255, 255, 255, 0.9);
+    }
+    .submit-btn{
+        margin-top: 9px;
+        width: 20%;
+        padding: 10px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 480px)  {
+    .form-group label{
+        font-size: 13px;
+    }
 }
